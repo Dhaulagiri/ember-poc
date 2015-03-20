@@ -21,5 +21,6 @@ app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
 app.import('bower_components/numeral/min/numeral.min.js');
 app.import('bower_components/moment/moment.js')
+app.import('bower_components/typeahead.js/dist/typeahead.bundle.js');
 
 module.exports = app.toTree();

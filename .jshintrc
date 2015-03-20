@@ -4,7 +4,8 @@
     "window",
     "-Promise",
     "numeral",
-    "moment"
+    "moment",
+    "Bloodhound"
   ],
   "browser": true,
   "boss": true,

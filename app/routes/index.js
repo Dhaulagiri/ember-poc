@@ -1,6 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  queryParams: {
+    symbol: {
+      refreshModel: true
+    }
+  },
   model: function(params) {
     var symbol = params.symbol || 'AAPL';
     var self = this;
@@ -12,5 +17,10 @@ export default Ember.Route.extend({
         resolve(self.store.push('quote', res));
       });
     });
+  },
+  actions: {
+    updateSymbol: function(symbol) {
+      this.transitionTo({queryParams: {symbol: symbol}});
+    }
   }
 });
