@@ -7,7 +7,7 @@
 
   {{#em-modal-body}}
       {{textarea value=text cols="75" rows="6"}}
-      <div class="clearfix">
+      <div class="action-buttons clearfix">
         <div class="pull-right">
           <button {{action "addNote"}} class="btn btn-primary">Add Note</button>
           {{#em-modal-toggler class="btn btn-default"}}Close{{/em-modal-toggler}}
@@ -21,6 +21,8 @@
           {{#each notes as |note|}}
             <li>
               {{note.text}}
+              <button {{action "deleteNote" note.id}}
+                class="pull-right close">x</button>
             </li>
           {{/each}}
           </ul>
@@ -29,6 +31,5 @@
         {{/if}}
       </div>
   {{/em-modal-body}}
-
 
 {{/em-modal}}

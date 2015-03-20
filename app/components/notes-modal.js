@@ -7,8 +7,11 @@ export default Ember.Component.extend({
   targetObject: Em.computed.alias('parentView'),
   actions: {
     addNote: function() {
-      this.sendAction('action', this.get('text'));
+      this.sendAction('addNote', this.get('text'));
       this.set('text', '');
+    },
+    deleteNote: function(noteId) {
+      this.sendAction('deleteNote', noteId)
     }
   }
 });
