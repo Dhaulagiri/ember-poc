@@ -3,9 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   queryParams: ['symbol'],
   actions: {
-    addNote: function(text) {
+    addNote: function(text, symbol) {
       var newNote = this.store.createRecord('note', {
-        text: text
+        text: text,
+        symbol: symbol
       });
 
       newNote.save();
@@ -15,5 +16,13 @@ export default Ember.Controller.extend({
         note.destroyRecord();
       });
     }
-  }
+  },
+  filteredNotes: Ember.computed('model.notes.@each', function() {
+    // Filter out any notes that don't belong to the currently active symbol
+    var notes = this.get('model').notes;
+    var symbol = this.get('symbol') || 'AAPL';
+    return notes.filter(function(note) {
+      return note.get('symbol') === symbol;
+    });
+  })
 });

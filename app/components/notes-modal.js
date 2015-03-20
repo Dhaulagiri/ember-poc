@@ -6,10 +6,11 @@ export default Ember.Component.extend({
   tagName: 'span',
   targetObject: Ember.computed.alias('parentView'),
   actions: {
-    addNote: function() {
+    addNote: function(symbol) {
+
       var text = this.get('text');
       if (text.length > 0) {
-        this.sendAction('addNote', this.get('text'));
+        this.sendAction('addNote', this.get('text'), symbol);
         this.set('text', '');
       } else {
         // error trapping
