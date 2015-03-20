@@ -1,8 +1,16 @@
 <section id="quote-container">
   <div class="row">
-    <h2>{{quote.Name}}</h2>
+    <h2>
+      {{quote.Name}}
+      {{#em-modal-toggler modal-id="notesModal" class="btn btn-primary"}}
+        {{notes.length}} Notes
+      {{/em-modal-toggler}}
+    </h2>
+    {{notes-modal quote=quote notes=notes action="addNote"}}
+
     <p class="text-primary">{{quote.Symbol}}</p>
   </div>
+
   <div id="quote-bar-container">
     <div class="row quote-bar">
       <dl>
@@ -30,6 +38,7 @@
       Last Updated:  {{format-date quote.Timestamp}}
     </div>
   </div>
+
   <div class="row">
     <div class="col-sm-6">
       <h3>Let's Have A Better Look</h3>
