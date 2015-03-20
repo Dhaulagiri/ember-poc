@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "bootstrap": "~3.3.4",
-    "numeral": "~1.5.3"
+    "numeral": "~1.5.3",
+    "moment": "~2.9.0"
   }
 }
