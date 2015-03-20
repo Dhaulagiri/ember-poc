@@ -1,0 +1,19 @@
+{{#em-modal configName="bs" id="notesModal"}}
+  {{#em-modal-title}}
+    {{#em-modal-toggler class="close"}}x{{/em-modal-toggler}}
+    <h4 class="modal-title">{{quote.Symbol}} Notes</h4>
+  {{/em-modal-title}}
+
+  {{#em-modal-body}}
+      Notes will go here
+  {{/em-modal-body}}
+
+  {{#em-modal-footer}}
+      {{#em-modal-toggler class="btn btn-default"}}Close{{/em-modal-toggler}}
+  {{/em-modal-footer}}
+
+{{/em-modal}}
+
+{{#em-modal-toggler modal-id="notesModal" class="btn btn-primary"}}
+  Notes
+{{/em-modal-toggler}}

@@ -1,6 +1,9 @@
 <section id="quote-container">
   <div class="row">
-    <h2>{{quote.Name}}</h2>
+    <h2>{{quote.Name}}
+      {{notes-modal quote=quote}}
+    </h2>
+
     <p class="text-primary">{{quote.Symbol}}</p>
   </div>
   <div id="quote-bar-container">
