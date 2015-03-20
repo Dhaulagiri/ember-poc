@@ -1,0 +1,89 @@
+<section id="quote-container">
+  <div class="row">
+    <h2>{{quote.Name}}</h2>
+    <p class="text-primary">{{quote.Symbol}}</p>
+  </div>
+  <div id="quote-bar-container">
+    <div class="row quote-bar">
+      <dl>
+        <dt>Last Price</dt>
+        <dd>{{format-currency quote.LastPrice}}</dd>
+      </dl>
+      <dl>
+        <dt>1 Day Change</dt>
+        <dd>{{format-currency quote.Change}} {{format-percent quote.ChangePercent}}</dd>
+      </dl>
+      <dl>
+        <dt>Volume</dt>
+        <dd>{{quote.Volume}}</dd>
+      </dl>
+      <dl>
+        <dt>High</dt>
+        <dd>{{format-currency quote.High}}</dd>
+      </dl>
+      <dl>
+        <dt>Low</dt>
+        <dd>{{format-currency quote.Low}}</dd>
+      </dl>
+    </div>
+    <div class="row pull-right text-muted">
+      Last Updated:  {{format-date quote.Timestamp}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Let's Have A Better Look</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Last Price</th>
+            <td class="text-right">{{format-currency quote.LastPrice}}</td>
+          </tr>
+          <tr>
+            <th scope="row">1 Day Change</th>
+            <td class="text-right">{{format-currency quote.Change}}</td>
+          </tr>
+          <tr>
+            <th scope="row">1 Day Change %</th>
+            <td class="text-right">{{format-percent quote.ChangePercent}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Change YTD</th>
+            <td class="text-right">{{format-currency quote.ChangeYTD}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Change % YTD</th>
+            <td class="text-right">{{format-percent quote.ChangePercentYTD}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h3>Secondary Module</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Open</th>
+            <td class="text-right">{{format-currency quote.Open}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Market Cap</th>
+            <td class="text-right">{{quote.MarketCap}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Volume</th>
+            <td class="text-right">{{quote.Volume}}</td>
+          </tr>
+          <tr>
+            <th scope="row">High</th>
+            <td class="text-right">{{format-currency quote.High}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Low</th>
+            <td class="text-right">{{format-currency quote.Low}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
