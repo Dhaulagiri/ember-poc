@@ -11,9 +11,7 @@ export default Ember.Controller.extend({
       newNote.save();
     },
     deleteNote: function(noteId) {
-      debugger
       this.store.find('note', noteId).then(function(note) {
-        debugger
         note.destroyRecord();
       });
     }

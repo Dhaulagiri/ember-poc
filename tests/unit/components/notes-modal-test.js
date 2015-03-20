@@ -5,7 +5,7 @@ import {
 
 moduleForComponent('notes-modal', {
   // specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
+  needs: ['component:em-modal']
 });
 
 test('it renders', function(assert) {

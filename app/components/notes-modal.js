@@ -4,7 +4,7 @@ import layout from '../templates/components/notes-modal';
 export default Ember.Component.extend({
   layout: layout,
   tagName: 'span',
-  targetObject: Em.computed.alias('parentView'),
+  targetObject: Ember.computed.alias('parentView'),
   actions: {
     addNote: function() {
       var text = this.get('text');
@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       }
     },
     deleteNote: function(noteId) {
-      this.sendAction('deleteNote', noteId)
+      this.sendAction('deleteNote', noteId);
     }
   }
 });

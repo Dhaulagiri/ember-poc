@@ -34,7 +34,7 @@ export default Ember.Route.extend({
     var url = `http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=${symbol}&callback=?`;
 
     Ember.$.getJSON(url).then(function(res) {
-      Ember.set(model, 'quote', res)
+      Ember.set(model, 'quote', res);
     });
 
     timeoutFunc = setTimeout(this.refreshQuote.bind(this, model), TIMEOUT);

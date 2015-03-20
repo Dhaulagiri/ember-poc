@@ -5,7 +5,13 @@ import {
 
 moduleForComponent('quote-module', {
   // specify the other units that are required for this test
-  needs: ['helper:format-currency', 'helper:format-percent']
+  needs: [
+    'helper:format-currency',
+    'helper:format-percent',
+    'helper:format-date',
+    'component:em-modal-toggler',
+    'component:notes-modal'
+    ]
 });
 
 test('it renders', function(assert) {
